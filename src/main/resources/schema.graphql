@@ -1,0 +1,20 @@
+type Student{
+
+	cin: String!
+	nompre: String! 
+	email: String!
+
+}
+type Query {
+	allStudents: [Student]
+	search(cin:String): Student
+}
+
+type Mutation{
+save(cin:String, nompre:String, email:String): Student
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+}
